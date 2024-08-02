@@ -25,7 +25,7 @@ resource "azurerm_storage_blob" "create_test_file" {
   storage_account_name   = azurerm_storage_account.storage.name
   storage_container_name = azurerm_storage_container.create_container["source"].name
   type                   = "Block"
-  source_content = "Hello CodeWithYu Community!"
+  source_content = "Hey Xamba!"
 }
 
 output "storage_account_key" {
