@@ -19,3 +19,6 @@ resource "azurerm_resource_group" "rg" {
   tags     = var.tags
 }
 
+module "storage_account" {
+  source = "./modules/storage_account/storage_account/"
+}
