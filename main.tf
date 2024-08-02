@@ -20,12 +20,11 @@ resource "azurerm_resource_group" "rg" {
 }
 
 module "storage_account" {
-  source = "./modules/storage_account/storage_account/storage_account"
-
-  destination_folder_name = ""
-  location = ""
-  resource_group_name = ""  
-  source_folder_name = ""
-  storage_account_name = ""
+  source = "./modules/storage_account/storage_account"
   
+  resource_group_name = var.resource_group_name  
+  storage_account_name = var.storage_account_name
+  location = var.location
+  source_folder_name = var.source_folder_name
+  destination_folder_name = var.destination_folder_name
 }
