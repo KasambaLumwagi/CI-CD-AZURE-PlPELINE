@@ -1,5 +1,5 @@
-resource_group_name = "xamba"
-storage_account_name = "storage"
+resource_group_name = "xamba13268-rg"
+storage_account_name = "xasto"
 location = "eastus"
 
 
