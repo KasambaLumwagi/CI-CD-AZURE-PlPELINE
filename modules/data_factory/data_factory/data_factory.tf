@@ -56,5 +56,31 @@ resource "azurerm_data_factory_dataset_binary" "destination_dataset"{
     filename = "test-${formatdate("YYYY-MM-DD-hh-mm-ss", timestamp())}.txt"
     path = "destination"
 
+    }
 }
+
+resource "azurerm_data_factory_pipeline" "copy_data"{
+    name ="copy_data_pipeline" 
+    data_factory_id = azure_data_factory.adf.id
+
+    activities_json = <<JSON
+[{
+    "name": "CopyFromSourceToDestination"}
+    "type": "Copy"
+    "inputs":[
+        {"name":"source_dataset"}
+    ],
+    "outputs":[
+        {"name":"destination_dataset"}
+    ],
+    "typeProperties":{
+        "source:{
+        "type"}
+    "sink""
+    }
+
+}
+]
+
+    JSON
 }
