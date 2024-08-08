@@ -29,3 +29,9 @@ variable "destination_folder_name" {
     description = "destination of folder" 
     type = string
 }
+
+variable "df_name" {
+    description = "dta factory name"
+    type = string
+  
+}
