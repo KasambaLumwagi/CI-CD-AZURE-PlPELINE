@@ -101,7 +101,15 @@ terraform plan -var-file=variables.tfvars -out=plan.out
 ```
 ### Applying Changes
 After reviewing the plan, apply the changes to your infrastructure:
-
+This command will apply the changes described in the plan.out file and create or modify the infrastructure resources on Azure.
 ```bash
 terraform apply plan.out
 ```
+### Destroying Resources
+If you need to tear down the infrastructure, use the destroy command:
+```bash
+terraform destroy -var-file=variables.tfvars
+
+```
+
+
