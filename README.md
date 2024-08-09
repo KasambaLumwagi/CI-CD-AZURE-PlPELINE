@@ -43,3 +43,19 @@ The project is organized as follows:
 └── variables.tfvars              # File containing the values of variables
 
 6 directories, 11 files
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- [Terraform](https://www.terraform.io/downloads.html) (v1.0.0 or later)
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) for managing Azure credentials
+- An Azure account with sufficient permissions to create and manage resources
+
+## Setup and Initialization
+
+### Clone the Repository:
+
+```bash
+git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
