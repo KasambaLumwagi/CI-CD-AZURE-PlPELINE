@@ -99,5 +99,9 @@ To preview the changes Terraform will make, run the following command. This will
 ```bash
 terraform plan -var-file=variables.tfvars -out=plan.out
 ```
+### Applying Changes
+After reviewing the plan, apply the changes to your infrastructure:
 
-
+```bash
+terraform apply plan.out
+```
