@@ -16,8 +16,7 @@ This repository contains Terraform configurations for setting up and managing Az
   - [Data Factory Module](#data-factory-module)
   - [Storage Account Module](#storage-account-module)
 - [State Management](#state-management)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
+
 
 ## Project Structure
 
@@ -111,5 +110,18 @@ If you need to tear down the infrastructure, use the destroy command:
 terraform destroy -var-file=variables.tfvars
 
 ```
+## Modules
+
+### Data Factory Module
+
+The `data_factory` module is responsible for creating an Azure Data Factory. It is defined in `modules/data_factory/data_factory/data_factory.tf`. The variables used by this module are defined in the corresponding `variables.tf` file within the module.
+
+### Storage Account Module
+
+The `storage_account` module manages the creation of an Azure Storage Account. The configuration is located in `modules/storage_account/storage_account/storage_account.tf`, with associated variables in the `variables.tf` file.
+
+## State Management
+
+Terraform manages the state of your infrastructure in the `terraform.tfstate` file. This file is crucial as it tracks the resources Terraform manages. A backup of the previous state is stored in `terraform.tfstate.backup`.
 
 
