@@ -44,6 +44,7 @@ The project is organized as follows:
 
 6 directories, 11 files
 
+```
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
@@ -59,3 +60,44 @@ Before you begin, ensure you have the following installed:
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
+
+```
+## Authenticate with Azure
+
+Before initializing Terraform, authenticate with your Azure account:
+
+```bash
+az login
+```
+
+## Initialize Terraform
+Initialize Terraform to download the required providers and modules:
+```bash
+terraform init
+```
+## Configuration
+
+### Variables
+
+The configuration values for the Terraform modules are defined in `variables.tf` files. You can specify these values in the `variables.tfvars` file or directly in the command line.
+
+### Edit `variables.tfvars`
+
+Open the `variables.tfvars` file and update it with your desired values. For example:
+
+```hcl
+resource_group_name = "my-resource-group"
+location = "eastus"
+storage_account_name = "mystorageaccount"
+data_factory_name = "mydatafactory"
+```
+
+### Planning
+
+To preview the changes Terraform will make, run the following command. This will generate a plan and save it to plan.out:
+
+```bash
+terraform plan -var-file=variables.tfvars -out=plan.out
+```
+
+
